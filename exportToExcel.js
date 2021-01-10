@@ -8,8 +8,8 @@ function exportToExcel(tableId){
 
 	//po kliknutí se stáhne
 	let a = document.createElement('a')
-	let dataType = 'data:application/vnd.ms-excel';
+	let dataType = 'data:application/vnd.ms-excel;charset=UTF-8;base64,base32,';
 	a.href = `data:application/vnd.ms-excel, ${encodeURIComponent(tableData)}`
-	a.download = 'Seznam knížek' + '.xls'
+	a.download = 'Seznam knih' + '.xls'
 	a.click()
 }

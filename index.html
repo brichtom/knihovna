@@ -10,7 +10,6 @@
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
@@ -51,7 +50,7 @@
                                 </thead>
                                 <tbody id="kniha-list"></tbody>
                             </table>
-                            <input type="button" value="Exportovat Tabulku" onclick="exportToExcel('exTable')" />
+                            <input type="button" value="Exportovat mojí knihovnu do excelu" class="btn btn-success btn-block" onclick="exportToExcel('exTable')" />
                         </div>
                     </div>  
                 </div>      
@@ -59,7 +58,7 @@
 
     </div>
 
-    <script src="exportToExcel.js" defer></script>
+    <script src="exportToExcel.js" charset="UTF-8"></script>
     <script src="app.js"></script>
 
 </body>
