@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <title>Knihovna</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="topnav topnav-right" id="myTopnav">
+        <a href="index.html">Moje knihovna</a>
+        <a href="pridej.html">Přidej knihu na seznam</a>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-info "></nav>
+
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Přidání knihy na seznam</h1>      
+        </div>  
+    
+        <h2>Zadejte následující údaje:</h2>
+
+        <section id="for" class="section">
+            <div class="messenger mt-2">
+                <form id="kniha-form">
+                    <div class="form-group">
+                        <label for="autor">Autor:&nbsp</label>
+                        <input type="text" id="autor">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nazev">Název:&nbsp</label>
+                        <input type="text" id="nazev">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="zanr">Žánr:&nbsp&nbsp&nbsp&nbsp</label>
+
+                        <label class="radio-inline">
+                            <input type="radio" id="zanr" name="zanr" value="Fantasy"> Fantasy
+                        </label>
+
+                        <label class="radio-inline">
+                            <input type="radio" id="zanr" name="zanr"  value="Román"> Román
+                        </label>
+
+                        <label class="radio-inline">
+                            <input type="radio" id="zanr" name="zanr"  value="Detektivka"> Detektivka
+                        </label>
+
+                        <label class="radio-inline">
+                            <input type="radio" id="zanr" name="zanr"  value="Sci-fi"> Sci-fi
+                        </label>
+
+                        <label class="radio-inline">
+                            <input type="radio" id="zanr" name="zanr"  value="Thriller"> Thriller
+                        </label>
+
+                        <label class="radio-inline">
+                            <input type="radio" id="zanr" name="zanr"  value="Horor"> Horor
+                        </label>
+
+                        <label class="radio-inline">
+                            <input type="radio" id="zanr" name="zanr"  value="Komiks"> Komiks
+                        </label>
+
+                        <label class="radio-inline">
+                            <input type="radio" id="zanr" name="zanr"  value="Ostatní"> Ostatní
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pozn">Poznámka:&nbsp</label>
+                        <input type="text" id="pozn">
+                    </div><br>
+
+                    <input type="submit" onclick="location.href='index.html'" value="Přidat knihu na seznam" class="btn btn-success btn-block">
+                </form>
+            </div>
+        </section>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
