@@ -105,3 +105,63 @@ class UI {
 }
 
 
+// Třída Store, stará se o úložiště
+class Store {
+    static getKnihy() {
+        let knihy;
+        if(localStorage.getItem('knihy') === null) {
+            knihy = [];
+        } else {
+            knihy = JSON.parse(localStorage.getItem('knihy'));
+        }
+
+        return knihy;
+    }
+
+    //Přidání položky a seřezení podle abecedy
+    static addKniha(kniha) {
+        const knihy = Store.getKnihy();
+        knihy.push(kniha);
+
+        localStorage.setItem("knihy", JSON.stringify(knihy));
+    }
+
+    //nastavení ID
+    static getNewID() {
+        let lastID;
+        if(localStorage.getItem('lastID') === null) {
+            lastID = 1;
+            localStorage.setItem("lastID", lastID);
+        } else {
+            lastID = Number(localStorage.getItem('lastID')) + 1;
+            localStorage.setItem("lastID", lastID);
+        }
+        
+        return lastID;    
+    }
+
+    //Odebrání položky
+    static removeKniha(id) {
+        console.log(id);
+        const knihy = Store.getKnihy();
+        knihy.forEach((kniha, index) => {
+            if(Number(kniha.id) === Number(id)) {
+                knihy.splice(index, 1);
+            }
+        });
+
+        localStorage.setItem('knihy', JSON.stringify(knihy));
+    }
+
+    // Odebere položku z paměti, pouze pokud odsouhlasíme confirm + vypíše hlášky
+    static confirmDelete(){
+        if (confirm('Opravdu chcete položku odebrat?') == true) {
+            document.querySelector('#kniha-list').addEventListener('click', (e) => {
+     
+                UI.deleteKniha(e.target);
+                Store.removeKniha(e.target.parentElement.parentNode.firstElementChild.innerHTML);
+                
+            }); 
+            
+        } 
+    }
