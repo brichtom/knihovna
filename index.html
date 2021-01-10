@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <title>Knihovna</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+<body>
+
+    <div class="topnav topnav-right" id="myTopnav">
+        <a href="index.html">Moje knihovna</a>
+        <a href="pridej.html">Přidej knihu na seznam</a>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-info "></nav> 
+   
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Moje knihovna</h1>      
+        </div>  
+
+
+        <section id="vyp" class="section2">
+                <div class="containers2 mt-2">
+                    <div class="row">
+                        <div class="service">
+                            <p id="demo"></p>
+                            <table style="width:100%" class="table table-striped">
+                                <thead align="center">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Autor</th>
+                                        <th>Název</th>
+                                        <th>Žánr</th>
+                                        <th>Poznámka</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="kniha-list"></tbody>
+                            </table>
+                        </div>
+                    </div>  
+                </div>      
+        </section>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
