@@ -88,6 +88,17 @@ th {
   color: #79b478;
 }
 
+@supports (zoom:1.5) {
+	#kniha-list .form-check-input {
+	  zoom: 1.5;
+	}
+}
+@supports not (zoom:1.5) {
+	#kniha-list .form-check-input {
+		transform: scale(1.5);
+	}
+}
+
 /* zarovnává obrázky */
 * {
   -webkit-box-sizing: border-box;

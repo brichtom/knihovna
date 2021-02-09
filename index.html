@@ -35,11 +35,17 @@
         <section id="vyp" class="section2">
                 <div class="containers2 mt-2">
                     <div class="row">
+                        <select id="filtr" class="form-control">
+                            <option value="autor">Autor</option>
+                            <option value="nazev">Název</option>
+                            <option value="zanr">Žánr</option>
+                        </select>
                         <div class="service">
                             <p id="demo"></p>
                             <table id="exTable" style="width:100%" class="table table-striped">
                                 <thead align="center">
                                     <tr>
+                                        <th></th>
                                         <th>ID</th>
                                         <th>Autor</th>
                                         <th>Název</th>
@@ -50,7 +56,14 @@
                                 </thead>
                                 <tbody id="kniha-list"></tbody>
                             </table>
-                            <input type="button" value="Exportovat mojí knihovnu do excelu" class="btn btn-success btn-block" onclick="exportToExcel('exTable')" />
+                            <div class="btn-group btn-group-justified" role="toolbar">
+                                <div class="btn-group" role="group">
+                                    <input type="button" value="Exportovat pouze vybrané knihy do CSV" class="btn btn-success btn-block" onclick="Store.exportOnlySelToCSV()" />
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <input type="button" value="Exportovat celou mojí knihovnu do CSV" class="btn btn-success btn-block" onclick="Store.exportToCSV()" />
+                                </div>
+                            </div>
                         </div>
                     </div>  
                 </div>      
